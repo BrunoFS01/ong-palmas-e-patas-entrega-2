@@ -39,9 +39,6 @@ Este repositório contém o código-fonte do website institucional da ONG fictí
 * **Estilização:** Interface visual em desenvolvimento com CSS3, incluindo estilização global e específica para cada página.
 * **Próximos Passos:**
   * Estruturar um design system utilizando variáveis CSS customizadas.
-  * Definir uma paleta com no mínimo 8 cores entre primárias, secundárias e neutras.
-  * Estabelecer uma hierarquia tipográfica com no mínimo 5 tamanhos de fonte.
-  * Padronizar os espaçamentos em 8px, 16px, 24px, 32px, 48px e 64px.
   * Implementar CSS Grid na estrutura principal das páginas.
   * Utilizar Flexbox nos componentes internos e alinhamentos.
   * Desenvolver um sistema de grid customizado de 12 colunas.

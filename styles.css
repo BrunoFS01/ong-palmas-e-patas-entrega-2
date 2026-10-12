@@ -1,3 +1,23 @@
+/*
+PALETA DE CORES
+Principais
+#ff9933 (Laranja)
+#33cc99 (Verde-água)
+#346578 (Azul-escuro)
+
+Apoios
+#91e7ca (Verde-suave)
+#008C5E (Verde-escuro)
+#b85e12 (Laranja-escuro)
+
+Neutras
+#0c0c0c (Preto)
+#f2f2f2 (Cinza-claro)
+
+Padronização de espaçamentos (Padding, Margin e Gab):
+8px, 16px, 24px, 32px, 48px e 64px.
+/*
+
 /* Import das fontes "Hammersmith One" e "Signika Negative" via Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Signika+Negative:wght@300..700&display=swap');
 
@@ -18,22 +38,22 @@
     border-radius: 50px;
     position: relative;
     top: -20px; /* Para sobrepor o banner */
-    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.25);
 }
 /* Menu principal - texto */
 .menu-principal a {
-    font-size: 24px;
+    font-size: 26px;
     color: #f2f2f2;
     text-decoration: none; /* Remover sublinhado padrão */
     font-family: "Hammersmith One", sans-serif;
     text-align: center;
     flex: 1;
     border-right: 2px solid #f2f2f2;
-    padding: 12px; /* espaçaento interno */
+    padding: 16px; /* espaçaento interno */
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px; /* Espaçamento entre os elementos (texto e ícone) */
+    gap: 8px; /* Espaçamento entre os elementos (texto e ícone) */
 }
 /* Excluir divisória do menu depois de "Cadastre-se" */
 .menu-principal a:last-child {
@@ -48,43 +68,51 @@
 
 body {
     background-color: #f2f2f2; /* Cor de fundo do site*/
-    margin: 20px;
+    margin: 24px;
     font-family: "Signika Negative", sans-serif; /* Fonte padrão do site*/
 }
 
 main {
-    margin: 20px; /* Para margem do texto do site */
+    margin: 24px; /* Para margem do texto do site */
     color:#0c0c0c
 }
 
-/* Títulos */
+/* Definições de textos */
 h1 {
     font-family: "Hammersmith One", sans-serif;
-    color: #33cc99;
+    color: #ff9933;
     font-size: 46px;
+    font-weight: 600;
 }
 h2 {
     font-family: "Hammersmith One", sans-serif;
-    color: #33cc99;
+    color: #008C5E;
     font-size: 32px;
 }
-
-/* Subtítulos */
-h3, h4 {
+h3 {
     font-family: "Signika Negative", sans-serif;
     font-weight: 700;
+    font-size: 24px;
+}
+h4 {
+    font-family: "Signika Negative", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+p, li {
+    font-size: 16px;
 }
 
 /* Adicionando uma linha depois dos títulos através da classe */
 .titulo-secao {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 16px;
 }
 .titulo-secao::after {
     content: "";
-    height: 2.5px;
-    background-color: #33cc99;
+    height: 3px;
+    background-color: #008C5E;
     flex: 1;
 }
 
@@ -93,7 +121,7 @@ footer {
     background-color: #346578;
     color: #f2f2f2;
     font-size: 12px;
-    padding: 5px;
+    padding: 8px;
 }
 
 .rodape-conteudo {
@@ -115,7 +143,7 @@ footer ul {
 
 /* Espaçamento entre Instagram, Facebook e WhatsApp */
 footer ul li {
-    margin: 3px 0;
+    margin: 8px 0;
 }
 
 footer address {
@@ -125,7 +153,7 @@ footer address {
 
 /* Espaçamento entre Endereço, E-mail e Telefone */
 footer address p {
-    margin: 5px 0;
+    margin: 8px 0;
 }
 
 /* Espaçamento abaixo dos títulos */

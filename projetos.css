@@ -2,20 +2,20 @@
 .projetos {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
 }
 .card-projeto {
     flex: 0;
     display: flex;
-    background-color: rgba(51, 204, 153, 0.4); /* Em RGB para controlar a opacidade */
+    background-color: #91e7ca;
     color: #0c0c0c;
-    padding: 20px;
+    padding: 16px;
     border-radius: 16px;
     align-items: center;
-    gap: 20px;
+    gap: 16px;
 }
 .card-projeto h4 {
-    margin: 0 0 10px 0;
+    margin: 0 0 8px 0;
 }
 
 .img-projeto {
@@ -27,21 +27,21 @@
 /* Contorno Formas de Doação*/
 .formas-doacao {
     display: flex;
-    gap: 60px;
+    gap: 64px;
 }
 .doacao {
     flex: 1;
-    border: 2.5px solid #33cc99;
+    border: 3px solid #33cc99;
     border-radius: 10px;
-    padding: 0 20px;
+    padding: 0 24px;
 }
 
 /* Formas de pagamento*/
 .formas-doacao {
     width: 90%;
     display: flex;
-    gap: 10px;
-    margin-left: 20px;
+    gap: 16px;
+    margin-left: 24px;
 }
 
 .pix,
@@ -52,26 +52,26 @@
 /* Outras formas de apoio*/
 #outras-formas ul {
     display: flex;
-    gap: 30px;
+    gap: 32px;
 }
 #outras-formas li {
     flex: 1;
 }
 #outras-formas ul {
     display: flex;
-    gap: 30px;
+    gap: 32px;
     list-style: none;
     padding: 0;
 }
 
 /* Destaque arrecadação*/
 .valor-arrecadado {
-    color: #009966;
+    color: #008C5E;
     font-size: 24px;
     font-weight: bold;
 }
 .porcentagem {
-    color: #009966;
+    color: #008C5E;
     font-weight: bold;
 }
 
@@ -87,17 +87,17 @@
 /* Caixa arrecadação*/
 #meta-arrecadacao {
     width: 60%;
-    border: 2.5px solid #33cc99;
+    border: 3px solid #33cc99;
     border-radius: 16px;
-    padding: 20px;
+    padding: 24px;
     padding-top: 0;
-    margin-left: 20px;
+    margin-left: 24px;
 }
 
 .barra-preenchida {
     width: 61%;
     height: 100%;
-    background-color: #009966;
+    background-color: #33cc99;
 }
 
 
@@ -106,7 +106,7 @@
     display: inline-block;
     background-color: #ff9933;
     color: #ffffff;
-    padding: 15px 25px;
+    padding: 16px 24px;
     border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
