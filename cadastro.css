@@ -14,6 +14,34 @@
     padding: 0 16px;
 }
 
+/* Grid customizado de 12 colunas */
+.grid-12 {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 16px;
+}
+/* Spans para as classes ocuparem 12, 6, 4 ou 12 colunas */
+.col-12 {
+    grid-column: span 12;
+}
+
+.col-6 {
+    grid-column: span 6;
+}
+
+.col-4 {
+    grid-column: span 4;
+}
+
+.col-3 {
+    grid-column: span 3;
+}
+
+.campo input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
 /* organização dos campos de preenchimento */
 /* Títulos das caixas */
 legend {
@@ -24,37 +52,14 @@ legend {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    flex: 1;
 }
-/* Organiza dois ou mais campos horizontalmente */
-.linha-campos {
-    display: flex;
-    gap: 24px;
-    margin-top: 8px; /* Espaçamento entre as linhas dos campos */
-}
-
-.dados-cadastro {
-    display: flex;
-    gap: 8px; /* Espaçamento entre as duas caixas */
-}
-.dados-cadastro > fieldset { /* Para os fieldset dividirem o mesmo espaço */
-    flex: 1;
-    min-width: 0;
-}
-.bloco-cadastro {
-    flex: 1;
-}
-.dados-cadastro fieldset {
-    flex: 1;
+/* Espaçamento interno dos fieldsets de dados */
+fieldset.col-6 {
     min-width: 0;
     padding: 24px;
 }
-
 /* Áreas de atuação */
 .areas-atuacao {
-    display: grid; /* Forma de grip */
-    grid-template-columns: 1fr 1fr; /* Linhas e colunas */
-    gap: 24px;
     padding: 16px;
 }
 /* Caixas */
