@@ -67,3 +67,32 @@
 .conquista p {
     margin: 8px 0 0 0;
 }
+
+/* Adaptações para celulares */
+@media (max-width: 600px) {
+    /* História e equipe */
+    .sobre-conteudo,
+    .equipe-conteudo {
+        flex-direction: column;
+        align-items: stretch;
+        margin: 16px 0;
+    }
+
+    .img-sobre,
+    .img-equipe {
+        width: 100%;
+        max-width: 310px;
+        height: auto;
+        align-self: center;
+    }
+
+    /* Missão, visão e valores */
+    .diretrizes {
+        flex-direction: column;
+    }
+
+    /* Conquistas */
+    .conquistas-caixas {
+        flex-direction: column;
+    }
+}

@@ -164,3 +164,109 @@ footer h3 {
 .rodape-final {
     text-align: center;
 }
+
+
+/* Adaptações para celulares */
+@media (max-width: 600px) {
+
+    /* Reduz as margens */
+    body {
+        margin: 8px;
+    }
+
+    main {
+        margin: 16px;
+    }
+
+    /* Ajusta os títulos */
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    /* Ajuste do Rodapé */
+    .rodape-conteudo {
+        flex-direction: column;
+        gap: 24px;
+        padding: 0 16px;
+    }
+}
+
+/* Menu */
+/* Menu mobile: oculto em computadores */
+.menu-mobile {
+    display: none;
+}
+
+/* Menu desktop */
+.menu-desktop {
+    display: flex;
+    flex: 1;
+}
+
+/* Menu hambúrguer para telas pequenas */
+@media (max-width: 600px) {
+    .menu-mobile {
+        display: block;
+        width: 100%;
+    }
+
+    .menu-desktop {
+        display: none;
+    }
+
+    .menu-principal {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        border-radius: 24px;
+    }
+
+    /* Barra se menu */
+    .menu-mobile summary {
+        color: #f2f2f2;
+        font-family: "Hammersmith One", sans-serif;
+        font-size: 16px;
+        padding: 8px 8px;
+        cursor: pointer;
+        list-style: none;
+        text-align: center;
+    }
+
+    /* Remove o marcador padrão do navegador */
+    .menu-mobile summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .menu-mobile summary::marker {
+        content: "";
+    }
+
+    .menu-links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Itens da barra de menu expandida */
+    .menu-links a {
+        font-size: 16px;
+        padding: 8px;
+        color: #f2f2f2;
+        text-decoration: none;
+        font-family: "Hammersmith One", sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        border-top: 2px solid #f2f2f2;
+    }
+
+    /* Barra se menu */
+    .menu-links a img {
+        width: 16px;
+        height: 16px;
+    }
+}

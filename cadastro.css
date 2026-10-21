@@ -81,3 +81,39 @@ button[type="submit"] {
     display: block; /* Transforma em bloco para aceitar as margens */
     margin: 0 auto; /* Margem automática para centralizar o botão */
 }
+
+/* Responsividade para celulares */
+@media (max-width: 600px) {
+
+    /* Caixas de orientações */
+    .orientacoes-caixas {
+        flex-direction: column;
+    }
+
+    .orientacoes-caixas article {
+        padding: 0 16px;
+    }
+
+    /* Campos do formulário */
+    .col-6,
+    .col-4,
+    .col-3 {
+        grid-column: span 12;
+    }
+
+    /* Reduz o espaçamento interno dos fieldsets */
+    fieldset.col-6 {
+        padding: 16px;
+    }
+
+    /* Áreas de atuação */
+    .area {
+        padding: 12px;
+    }
+
+    /* Botão de envio */
+    button[type="submit"] {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}

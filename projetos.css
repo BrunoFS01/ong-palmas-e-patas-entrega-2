@@ -112,3 +112,63 @@
     font-weight: bold;
     text-align: center;
 }
+
+
+/* Responsividade para celulares */
+@media (max-width: 600px) {
+
+    /* Cards de projetos */
+    .card-projeto {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .img-projeto {
+        width: 100%;
+        max-width: 310px;
+        height: auto;
+        align-self: center;
+    }
+
+    /* Formas de doação */
+    .formas-doacao {
+        width: auto;
+        flex-direction: column;
+        gap: 16px;
+        margin-left: 0;
+    }
+
+    .doacao {
+        padding: 0 16px;
+    }
+
+    /* Outras formas de apoio */
+    #outras-formas ul {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    #outras-formas li {
+        flex: auto;
+    }
+
+    /* Meta de arrecadação */
+    #meta-arrecadacao {
+        width: auto;
+        box-sizing: border-box;
+        margin-left: 0;
+        padding: 16px;
+        padding-top: 0;
+    }
+
+    /* Barra de progresso */
+    .barra-progresso {
+        width: 100%;
+    }
+
+    /* Botão de chamada para ação */
+    .btn-cta {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
