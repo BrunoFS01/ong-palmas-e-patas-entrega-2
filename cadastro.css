@@ -1,26 +1,35 @@
+/* ### 1. ORIENTAÇÕES DE CADASTRO ##############################
+   Estilização da seção inicial e caixas com instruções para voluntários */
+
+/* Definir margem para baixo pelo id */
 #orientacoes-cadastro {
     margin-bottom: 32px;
 }
 
-/* caixas para instruções de cadastro */
+/* Caixas de instruções de cadastro e requisitos */
 .orientacoes-caixas {
-    display: flex;
+    display: flex; /* Ativa o Flexbox para definir os alinhamentos e espaçamentos */
     gap: 24px;
 }
+
 .orientacoes-caixas article {
-    flex: 1;
+    flex: 1; /* Mantém os elementos na mesma linha dividindo o mesmo espaço */
     border: 3px solid #33cc99;
-    border-radius: 10px;
+    border-radius: 10px; /* Arredondamento das pontas */
     padding: 0 16px;
 }
 
-/* Grid customizado de 12 colunas */
+/* ### 2. SISTEMA DE GRID (12 COLUNAS) ##############################
+   Estrutura base em CSS Grid para organização dos formulários */
+
+/* Transforma a classe em um grid de 12 colunas */
 .grid-12 {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     gap: 16px;
 }
-/* Spans para as classes ocuparem 12, 6, 4 ou 12 colunas */
+
+/* Spans para as classes ocuparem 12, 6, 4 ou 3 colunas */
 .col-12 {
     grid-column: span 12;
 }
@@ -37,37 +46,40 @@
     grid-column: span 3;
 }
 
-.campo input {
-    width: 100%;
-    box-sizing: border-box;
+/* ### 3. ESTRUTURA DO FORMULÁRIO E CAMPOS ############################## */
+
+legend {
+    font-weight: 600; /* Peso da fonte das "legendas" dos formulários */
 }
 
-/* organização dos campos de preenchimento */
-/* Títulos das caixas */
-legend {
-    font-weight: 600;
-}
-/* Organiza verticalmente */
+/* Para organizar os campos em colunas */
 .campo {
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Ativa o Flexbox */
+    flex-direction: column; /* Organiza verticalmente */
     gap: 8px;
 }
+
 /* Espaçamento interno dos fieldsets de dados */
 fieldset.col-6 {
     min-width: 0;
     padding: 24px;
 }
-/* Áreas de atuação */
+
+/* ### 4. ÁREAS DE ATUAÇÃO ##############################
+   Caixas de seleção e destaque das áreas em que o voluntário pode atuar */
+
 .areas-atuacao {
     padding: 16px;
 }
-/* Caixas */
+
 .area {
     background-color: #91e7ca;
-    border-radius: 8px;
+    border-radius: 8px; /* Arredondamento das pontas */
     padding: 16px;
 }
+
+/* ### 5. BOTÃO DE ENVIO ##############################
+   Estilização do botão principal de submissão do formulário */
 
 button[type="submit"] {
     background-color: #ff9933;
@@ -75,19 +87,21 @@ button[type="submit"] {
     font-family: "Hammersmith One", sans-serif;
     font-size: 20px;
     border: none;
-    border-radius: 25px;
+    border-radius: 25px; /* Arredondamento das pontas */
     padding: 11px 46px;
     cursor: pointer;
     display: block; /* Transforma em bloco para aceitar as margens */
     margin: 0 auto; /* Margem automática para centralizar o botão */
 }
 
-/* Responsividade para celulares */
+/* ### 6. RESPONSIVIDADE (@media) ##############################
+   Ajustes de layout para telas pequenas e dispositivos móveis (até 600px) */
+
 @media (max-width: 600px) {
 
     /* Caixas de orientações */
     .orientacoes-caixas {
-        flex-direction: column;
+        flex-direction: column; /* Organiza verticalmente */
     }
 
     .orientacoes-caixas article {
@@ -98,7 +112,7 @@ button[type="submit"] {
     .col-6,
     .col-4,
     .col-3 {
-        grid-column: span 12;
+        grid-column: span 12; /* Faz com que todos os campos ocupem a largura total */
     }
 
     /* Reduz o espaçamento interno dos fieldsets */

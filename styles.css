@@ -1,25 +1,69 @@
-/*
-PALETA DE CORES
-Principais
-#ff9933 (Laranja)
-#33cc99 (Verde-água)
-#346578 (Azul-escuro)
-
-Apoios
-#91e7ca (Verde-suave)
-#008C5E (Verde-escuro)
-#b85e12 (Laranja-escuro)
-
-Neutras
-#0c0c0c (Preto)
-#f2f2f2 (Cinza-claro)
-
-Padronização de espaçamentos (Padding, Margin e Gab):
-8px, 16px, 24px, 32px, 48px e 64px.
-/*
+/* styles.css para estilizações globais do site */
 
 /* Import das fontes "Hammersmith One" e "Signika Negative" via Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Signika+Negative:wght@300..700&display=swap');
+
+/* ### 1. CONFIGURAÇÕES BASE ##############################
+   Estilos gerais da página e tipografia padrão */
+
+body {
+    background-color: #f2f2f2; /* Cor de fundo do site */
+    margin: 24px; /* Margem de respiro do corpo do site */
+    font-family: "Signika Negative", sans-serif; /* Fonte padrão do site */
+}
+
+main {
+    margin: 24px; /* Para margem do texto do site */
+    color: #0c0c0c; /* Cor de fonte base do conteúdo principal */
+}
+
+/* ### 2. TIPOGRAFIA & ELEMENTOS DE TEXTO ##############################
+   Estilização dos títulos e elementos textuais */
+
+h1 {
+    font-family: "Hammersmith One", sans-serif;
+    color: #ff9933;
+    font-size: 46px;
+    font-weight: 600;
+}
+
+h2 {
+    font-family: "Hammersmith One", sans-serif;
+    color: #008C5E;
+    font-size: 32px;
+}
+
+h3 {
+    font-family: "Signika Negative", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+h4 {
+    font-family: "Signika Negative", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+p, li {
+    font-size: 16px;
+}
+
+/* Adicionando uma linha depois dos títulos através da classe */
+.titulo-secao {
+    display: flex;
+    align-items: center; /* Centraliza os elementos */
+    gap: 16px;
+}
+
+.titulo-secao::after {
+    content: "";
+    height: 3px;
+    background-color: #008C5E;
+    flex: 1;
+}
+
+/* ### 3. BANNER ############################## */
 
 /* Imagen de Banner */
 .banner-img {
@@ -28,6 +72,9 @@ Padronização de espaçamentos (Padding, Margin e Gab):
     display: block;
 }
 
+/* ### 4. NAVEGAÇÃO & MENUS
+   Estrutura base do menu principal e variações para desktop e mobile ############################## */
+
 /* Menu principal - caixa */
 .menu-principal {
     background-color: #ff9933;
@@ -35,28 +82,30 @@ Padronização de espaçamentos (Padding, Margin e Gab):
     display: flex;
     width: 90%; /* Tamanho horizontal que a caixa ocupa */
     margin: 0 auto;
-    border-radius: 50px;
+    border-radius: 50px; /*arredondamento das pontas */
     position: relative;
     top: -20px; /* Para sobrepor o banner */
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.25);
 }
+
 /* Menu principal - texto */
 .menu-principal a {
     font-size: 26px;
     color: #f2f2f2;
     text-decoration: none; /* Remover sublinhado padrão */
     font-family: "Hammersmith One", sans-serif;
-    text-align: center;
+    text-align: center; /* Centraliza */
     flex: 1;
     border-right: 2px solid #f2f2f2;
-    padding: 16px; /* espaçaento interno */
+    padding: 16px; /* espaçamento interno */
     display: flex;
-    align-items: center;
+    align-items: center; /* Centraliza os elementos */
     justify-content: center;
     gap: 8px; /* Espaçamento entre os elementos (texto e ícone) */
 }
+
 /* Excluir divisória do menu depois de "Cadastre-se" */
-.menu-principal a:last-child {
+.menu-desktop a:last-child {
     border-right: none;
 }
 
@@ -66,57 +115,20 @@ Padronização de espaçamentos (Padding, Margin e Gab):
     height: 32px;
 }
 
-body {
-    background-color: #f2f2f2; /* Cor de fundo do site*/
-    margin: 24px;
-    font-family: "Signika Negative", sans-serif; /* Fonte padrão do site*/
+/* Controle de exibição dos menus */
+/* Menu mobile: oculto em computadores */
+.menu-mobile {
+    display: none;
 }
 
-main {
-    margin: 24px; /* Para margem do texto do site */
-    color:#0c0c0c
-}
-
-/* Definições de textos */
-h1 {
-    font-family: "Hammersmith One", sans-serif;
-    color: #ff9933;
-    font-size: 46px;
-    font-weight: 600;
-}
-h2 {
-    font-family: "Hammersmith One", sans-serif;
-    color: #008C5E;
-    font-size: 32px;
-}
-h3 {
-    font-family: "Signika Negative", sans-serif;
-    font-weight: 700;
-    font-size: 24px;
-}
-h4 {
-    font-family: "Signika Negative", sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-}
-p, li {
-    font-size: 16px;
-}
-
-/* Adicionando uma linha depois dos títulos através da classe */
-.titulo-secao {
+/* Menu desktop */
+.menu-desktop {
     display: flex;
-    align-items: center;
-    gap: 16px;
-}
-.titulo-secao::after {
-    content: "";
-    height: 3px;
-    background-color: #008C5E;
     flex: 1;
 }
 
-/* Rodapé*/
+/* ### 5. RODAPÉ (footer) ############################## */
+
 footer {
     background-color: #346578;
     color: #f2f2f2;
@@ -162,12 +174,13 @@ footer h3 {
 }
 
 .rodape-final {
-    text-align: center;
+    text-align: center; /* Centraliza */
 }
 
+/* ### 6. RESPONSIVIDADE (@media)
+   Adaptações para telas menores (até 600px) ############################## */
 
-/* Adaptações para celulares */
-@media (max-width: 600px) {
+@media (max-width: 600px) { /* Faz apenas telas com largurar igual ou inferior a 600px serem afetadas */
 
     /* Reduz as margens */
     body {
@@ -193,22 +206,8 @@ footer h3 {
         gap: 24px;
         padding: 0 16px;
     }
-}
 
-/* Menu */
-/* Menu mobile: oculto em computadores */
-.menu-mobile {
-    display: none;
-}
-
-/* Menu desktop */
-.menu-desktop {
-    display: flex;
-    flex: 1;
-}
-
-/* Menu hambúrguer para telas pequenas */
-@media (max-width: 600px) {
+    /* Menu hambúrguer e navegação mobile */
     .menu-mobile {
         display: block;
         width: 100%;
@@ -225,7 +224,7 @@ footer h3 {
         border-radius: 24px;
     }
 
-    /* Barra se menu */
+    /* Barra de menu */
     .menu-mobile summary {
         color: #f2f2f2;
         font-family: "Hammersmith One", sans-serif;
@@ -233,7 +232,7 @@ footer h3 {
         padding: 8px 8px;
         cursor: pointer;
         list-style: none;
-        text-align: center;
+        text-align: center; /* Centraliza */
     }
 
     /* Remove o marcador padrão do navegador */
@@ -258,13 +257,13 @@ footer h3 {
         text-decoration: none;
         font-family: "Hammersmith One", sans-serif;
         display: flex;
-        align-items: center;
+        align-items: center; /* Centraliza os elementos */
         justify-content: center;
         gap: 8px;
         border-top: 2px solid #f2f2f2;
     }
 
-    /* Barra se menu */
+    /* Ícones no menu mobile */
     .menu-links a img {
         width: 16px;
         height: 16px;
